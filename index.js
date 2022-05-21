@@ -6,7 +6,7 @@ const initialServer = require("./server/initialServer");
 
 (async () => {
   try {
-    // await connectDb(process.env.MONGO_PORT);
+    await connectDb(process.env.MONGO_PORT);
     await initialServer(process.env.SERVER_PORT || 4050);
     debug(chalk.greenBright("server connected"));
   } catch (error) {
