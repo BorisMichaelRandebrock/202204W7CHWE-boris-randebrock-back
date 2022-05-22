@@ -16,9 +16,9 @@ const loginUser = async (req, res, next) => {
 
     next(error);
   }
-  const rigthPassword = await bcrypt.compare(password, user.password);
+  const correctPassword = await bcrypt.compare(password, user.password);
 
-  if (!rigthPassword) {
+  if (!correctPassword) {
     const error = new Error("password");
     error.statusCode = 403;
     error.customMessage = "Incorrect username or password";
