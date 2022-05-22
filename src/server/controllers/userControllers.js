@@ -21,20 +21,14 @@ const loginUser = async (req, res, next) => {
 
     next(error);
   }
-  try {
-    const userData = {
-      username,
-      id: user.id,
-    };
-    const token = jwt.sign(userData, process.env.JWT_SECRET);
 
-    res.status(200).json({ token });
-  } catch (error) {
-    error.customMessage = "invalid user data";
-    error.statusCode = 400;
+  const userData = {
+    username,
+    id: user.id,
+  };
+  const token = jwt.sign(userData, process.env.JWT_SECRET);
 
-    next(error);
-  }
+  res.status(200).json({ token });
 };
 
 module.exports = { loginUser };
