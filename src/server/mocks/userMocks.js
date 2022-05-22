@@ -5,6 +5,11 @@ const mockUser = {
 
 const mockUsers = [
   {
+    name: "Boo",
+    username: "Bobobo",
+    password: "$2a$10$sqYdrrGz7t3p5ZhDA0FzFO3SWOLgEwfHgBIZRfCVh7PgVFxn1EViy",
+  },
+  {
     name: "Itsme",
     username: "yabadabadoo",
     password: "$2a$10$lJvaAUuUTME40jvTwJhI7eJf3I9VMbGXK9iv9Dclm1BR.BdNj0F82",
